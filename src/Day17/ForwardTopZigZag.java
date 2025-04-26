@@ -20,7 +20,7 @@ public class ForwardTopZigZag
         for(int j=0;j<n;++j)
         {
             int k = j;
-            int i = 0;
+            int i = 0; // fixed start
             while(k>=0)
             {
                 System.out.print(arr[i++][k--]+" ");
@@ -30,7 +30,7 @@ public class ForwardTopZigZag
         for(int i=1;i<n;++i)
         {
             int k = i;
-            int j = n-1;
+            int j = n-1; // fixed start
             while(k<n)
             {
                 System.out.print(arr[k++][j--]+" ");
