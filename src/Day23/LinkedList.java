@@ -59,7 +59,7 @@ public class LinkedList
 
     public void insertMiddle(int data, int pos)
     {
-        if(pos < 0 || pos > length)
+        if(pos < 0 || pos > length+1)
         {
             System.out.println("Invalid position!");
         }
@@ -111,6 +111,37 @@ public class LinkedList
             data = head.getData();
             head = head.getNext();
             this.length--;
+        }
+        return data;
+    }
+
+    public int deleteMiddle(int pos)
+    {
+        int data = -1;
+        if(pos < 0 || pos > length)
+        {
+            System.out.println("Invalid position!");
+            return data;
+        }
+        else
+        {
+            if(pos==1)
+                data = deleteFirst();
+            else if(pos==length)
+                data = deleteLast();
+            else
+            {
+                ListNode temp = head;
+                int c = 1;
+                while(c<pos-1)
+                {
+                    temp = temp.getNext();
+                    c++;
+                }
+                data = temp.getNext().getData();
+                temp.setNext(temp.getNext().getNext());
+                this.length--;
+            }
         }
         return data;
     }

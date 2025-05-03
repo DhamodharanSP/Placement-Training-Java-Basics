@@ -44,7 +44,17 @@ public class Main
         */
 
         //Delete Last Node
+        /*
         int data = list.deleteLast();
+        if(data!=-1)
+            System.out.println(data+" is deleted!");
+        list.printLinkedList();
+        */
+
+        //Delete Middle Node
+        System.out.print("Enter a position to delete: ");
+        int pos = in.nextInt();
+        int data = list.deleteMiddle(pos);
         if(data!=-1)
             System.out.println(data+" is deleted!");
         list.printLinkedList();
