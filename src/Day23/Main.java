@@ -20,6 +20,7 @@ public class Main
         /*
         System.out.print("Enter element to insert at front: ");
         list.insertFirst(in.nextInt());
+        list.printLinkedList();
         */
 
         //Insert at Middle
@@ -31,7 +32,20 @@ public class Main
         int pos = in.nextInt();
 
         list.insertMiddle(data, pos);
-        list.printLinkedList();*/
+        list.printLinkedList();
+        */
+
+        //Delete First
+
+        int data = list.deleteFirst();
+        if(data!=-1)
+            System.out.println(data+" is deleted!");
+        list.printLinkedList();
+
+
+        System.out.println("Linked List Empty status: "+list.isEmpty());
+
+        System.out.println("Linked List Length: "+list.getLength());
 
     }
 }

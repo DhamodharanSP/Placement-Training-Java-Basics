@@ -39,6 +39,11 @@ public class LinkedList
         this.length = 0;
     }
 
+    public int getLength()
+    {
+        return this.length;
+    }
+
     public void insertFirst(int data)
     {
         ListNode node = new ListNode(data);
@@ -49,6 +54,7 @@ public class LinkedList
            node.setNext(head);
            this.head = node;
         }
+        this.length++;
     }
 
     public void insertMiddle(int data, int pos)
@@ -69,13 +75,13 @@ public class LinkedList
             }
             node.setNext(temp.getNext());
             temp.setNext(node);
+            this.length++;
         }
     }
 
     public void insertLast(int data)
     {
         ListNode node = new ListNode(data);
-        this.length++;
         if(head == null)
             this.head = node;
         else
@@ -87,15 +93,42 @@ public class LinkedList
             }
             temp.setNext(node);
         }
+        this.length++;
     }
+
+    public int deleteFirst()
+    {
+        int data = -1;
+        if(head == null)
+            System.out.println("Linked List is Empty... Deletion not possible!");
+        else
+        {
+            data = head.getData();
+            head = head.getNext();
+            this.length--;
+        }
+        return data;
+    }
+
+    public boolean isEmpty()
+    {
+        return head==null;
+    }
+
     public void printLinkedList()
     {
+        if(head==null)
+        {
+            System.out.println("Linked list is Empty... Nothing to Print!");
+            return;
+        }
         ListNode temp = head;
         while(temp.getNext()!=null)
         {
             System.out.print(temp.getData()+" -> ");
             temp = temp.getNext();
         }
+
         System.out.println(temp.getData());
     }
 }
