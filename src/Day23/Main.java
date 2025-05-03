@@ -35,9 +35,16 @@ public class Main
         list.printLinkedList();
         */
 
-        //Delete First
-
+        //Delete First Node
+        /*
         int data = list.deleteFirst();
+        if(data!=-1)
+            System.out.println(data+" is deleted!");
+        list.printLinkedList();
+        */
+
+        //Delete Last Node
+        int data = list.deleteLast();
         if(data!=-1)
             System.out.println(data+" is deleted!");
         list.printLinkedList();
