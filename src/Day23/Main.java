@@ -52,13 +52,14 @@ public class Main
         */
 
         //Delete Middle Node
+        /*
         System.out.print("Enter a position to delete: ");
         int pos = in.nextInt();
         int data = list.deleteMiddle(pos);
         if(data!=-1)
             System.out.println(data+" is deleted!");
         list.printLinkedList();
-
+        */
 
         System.out.println("Linked List Empty status: "+list.isEmpty());
 
