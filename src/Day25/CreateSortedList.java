@@ -6,8 +6,6 @@ public class CreateSortedList
 {
     public static ListNode addInOrder(ListNode head, ListNode node)
     {
-        node.next = null;
-
         if(head == null)
         {
             head = node;
