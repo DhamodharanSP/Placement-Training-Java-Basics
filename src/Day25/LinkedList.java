@@ -10,6 +10,11 @@ public class LinkedList
         this.head = null;
     }
 
+    LinkedList(ListNode head)
+    {
+        this.head = head;
+    }
+
     public int getLength()
     {
         return length;
