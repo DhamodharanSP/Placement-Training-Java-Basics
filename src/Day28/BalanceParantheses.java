@@ -1,4 +1,5 @@
 package Day28;
 
-public class BalanceParantheses {
+public class BalanceParantheses
+{
 }
