@@ -47,6 +47,11 @@ public class CircularLinkedList
         this.length++;
     }
 
+    public void insertMiddle(int data)
+    {
+
+    }
+
     public void insertLast(int data)
     {
         ListNode node = new ListNode(data);
